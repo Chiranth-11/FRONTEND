@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>UrbanNest Properties | Buy & Rent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+  <header class="navbar">
+    <div class="logo">URBAN NEST</div>
+    <nav>
+      <!-- <div id="cartBox" class="cart">
+  🛒 Cart: <span id="cartCount">0</span>
+</div> -->
+
+      <a href="#home">Home</a>
+      <a href="#properties">Properties</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-primary">List Your Property</a>
+    </nav>
+  </header>
+ 
+
+
+  <!-- HERO -->
+   
+  <section id="home" class="hero section-offset">
+  
+    <div class="hero-text">
+      <h1 style="color:#2563eb; text-shadow:1px 1px 3px #999;">
+  Find Your Perfect Home
+</h1>
+
+      <p>Buy or rent from verified properties across Bangalore.</p>
+      <a href="#properties" class="btn-primary">View Properties</a>
+    </div>
+
+    <div class="hero-slider">
+      <img id="heroSlide" src="images/hero1.jpg" alt="Property">
+      <button class="slide-btn prev" onclick="prevHero()">❮</button>
+      <button class="slide-btn next" onclick="nextHero()">❯</button>
+    </div>
+  </section>
+  
+  <!-- <button onclick="toggleOffer()" >Show / Hide </button>
+<p id="specialOffer" class="highlight-offer" style="color:blue" >
+  Special Limited-Time Property Offer! no brokerage amount
+</p>
+  -->
+
+  
+  <section id="properties" class="properties">
+    <h2>Featured Properties</h2>
+
+    <div class="filter-bar">
+      <select id="searchLocation" class="filter-select">
+        <option value="all">All Areas</option>
+        <option value="whitefield">Whitefield</option>
+        <option value="banashankari">Banashankari</option>
+        <option value="koramangala">Koramangala</option>
+        <option value="jayanagar">Jayanagar</option>
+        <option value="indiranagar">Indiranagar</option>
+      </select>
+
+      <select id="searchBHK" class="filter-select">
+        <option value="all">All BHK</option>
+        <option value="1">1 BHK</option>
+        <option value="2">2 BHK</option>
+        <option value="3">3 BHK</option>
+      </select>
+
+      <select id="searchType" class="filter-select">
+        <option value="all">Rent / Sale</option>
+        <option value="rent">Rent</option>
+        <option value="sale">Sale</option>
+      </select>
+    </div>
+
+    <div class="property-grid">
+
+      <div class="property-card" data-location="whitefield" data-bhk="1" data-type="rent"
+        data-title="1 BHK – Whitefield" data-desc="Compact 1 BHK with balcony, 24/7 water and security."
+        data-area="Whitefield, Bangalore" data-price="₹22,000 / month" data-address="Sri Sai Residency, Whitefield"
+        data-owner="Rahul Kumar" data-phone="9876543210"> <img src="images/hero5.jpg" alt="1 BHK Whitefield"
+          class="property-img">
+        <h3>1 BHK – Whitefield</h3>
+        <p class="price">₹22,000 / month</p> <button class="view-details">View Details</button>
+        <!-- <button class="add-cart">Add to Cart</button> -->
+
+      </div>
+      
+
+      <div class="property-card" data-location="whitefield" data-bhk="2" data-type="sale"
+        data-title="2 BHK – Whitefield" data-desc="Spacious flat near IT parks with covered parking."
+        data-area="Whitefield, Bangalore" data-price="₹65 Lakhs" data-address="Green Meadows Apartments, Whitefield"
+        data-owner="Sanjay Verma" data-phone="9898989898"> <img src="images/hero6.jpg" alt="2 BHK Whitefield"
+          class="property-img">
+        <h3>2 BHK – Whitefield</h3>
+        <p class="price">₹65 Lakhs</p> <button class="view-details">View Details</button>
+        <!-- <button class="add-cart">Add to Cart</button> -->
+
+      </div> <!-- BANASHANKARI -->
+      <div class="property-card" data-location="banashankari" data-bhk="2" data-type="rent"
+        data-title="2 BHK – Banashankari" data-desc="Peaceful locality with metro station nearby."
+        data-area="Banashankari, Bangalore" data-price="₹26,000 / month" data-address="Sai Enclave, Banashankari"
+        data-owner="Meena" data-phone="9123456780"> <img src="images/hero7.jpg" alt="2 BHK Banashankari"
+          class="property-img">
+        <h3>2 BHK – Banashankari</h3>
+        <p class="price">₹26,000 / month</p> <button class="view-details">View Details</button>
+      </div>
+      <div class="property-card" data-location="banashankari" data-bhk="3" data-type="sale"
+        data-title="3 BHK – Banashankari" data-desc="Large family home with terrace and car parking."
+        data-area="Banashankari, Bangalore" data-price="₹90 Lakhs" data-address="Near Banashankari Temple"
+        data-owner="Raghavendra" data-phone="9000011111"> <img src="images/hero8.jpg" alt="3 BHK Banashankari"
+          class="property-img">
+        <h3>3 BHK – Banashankari</h3>
+        <p class="price">₹90 Lakhs</p> <button class="view-details">View Details</button>
+      </div> <!-- KORAMANGALA -->
+      <div class="property-card" data-location="koramangala" data-bhk="1" data-type="rent"
+        data-title="1 BHK – Koramangala" data-desc="Prime location, walkable to offices and cafes."
+        data-area="Koramangala, Bangalore" data-price="₹28,000 / month" data-address="Near Forum Mall, Koramangala"
+        data-owner="Anita" data-phone="9876123456"> <img src="images/hero9.jpg" alt="1 BHK Koramangala"
+          class="property-img">
+        <h3>1 BHK – Koramangala</h3>
+        <p class="price">₹28,000 / month</p> <button class="view-details">View Details</button>
+      </div>
+      <div class="property-card" data-location="koramangala" data-bhk="2" data-type="sale"
+        data-title="2 BHK – Koramangala" data-desc="Modern apartment with gym and clubhouse."
+        data-area="Koramangala, Bangalore" data-price="₹1.2 Crore" data-address="Elite Towers, Koramangala"
+        data-owner="Vikram" data-phone="9988776655"> <img src="images/hero10.jpg" alt="2 BHK Koramangala"
+          class="property-img">
+        <h3>2 BHK – Koramangala</h3>
+        <p class="price">₹1.2 Crore</p> <button class="view-details">View Details</button>
+      </div> <!-- JAYANAGAR -->
+      <div class="property-card" data-location="jayanagar" data-bhk="1" data-type="rent" data-title="1 BHK – Jayanagar"
+        data-desc="Quiet neighbourhood, ideal for professionals." data-area="Jayanagar, Bangalore"
+        data-price="₹24,000 / month" data-address="Jayanagar 4th Block" data-owner="Suresh" data-phone="9012345678">
+        <img src="images/hero11.jpg" alt="1 BHK Jayanagar" class="property-img">
+        <h3>1 BHK – Jayanagar</h3>
+        <p class="price">₹24,000 / month</p> <button class="view-details">View Details</button>
+      </div>
+      <div class="property-card" data-location="jayanagar" data-bhk="2" data-type="sale" data-title="2 BHK – Jayanagar"
+        data-desc="Well-maintained flat with lift and security." data-area="Jayanagar, Bangalore" data-price="₹75 Lakhs"
+        data-address="Near Jayanagar Shopping Complex" data-owner="Prakash" data-phone="9090909090"> <img
+          src="images/hero12.jpg" alt="2 BHK Jayanagar" class="property-img">
+        <h3>2 BHK – Jayanagar</h3>
+        <p class="price">₹75 Lakhs</p> <button class="view-details">View Details</button>
+      </div> <!-- INDIRANAGAR -->
+      <div class="property-card" data-location="indiranagar" data-bhk="2" data-type="rent"
+        data-title="2 BHK – Indiranagar" data-desc="Fully furnished with balcony and covered parking."
+        data-area="Indiranagar, Bangalore" data-price="₹35,000 / month" data-address="12th Main, Indiranagar"
+        data-owner="Divya" data-phone="9765432100"> <img src="images/hero13.jpg" alt="2 BHK Indiranagar"
+          class="property-img">
+        <h3>2 BHK – Indiranagar</h3>
+        <p class="price">₹35,000 / month</p> <button class="view-details">View Details</button>
+      </div>
+      <div class="property-card" data-location="indiranagar" data-bhk="3" data-type="sale"
+        data-title="3 BHK – Indiranagar" data-desc="Luxury apartment with premium interiors."
+        data-area="Indiranagar, Bangalore" data-price="₹1.5 Crore" data-address="Prime Residency, Indiranagar"
+        data-owner="Karthik" data-phone="9444444444"> <img src="images/hero14.jpg" alt="3 BHK Indiranagar"
+          class="property-img">
+        <h3>3 BHK – Indiranagar</h3>
+        <p class="price">₹1.5 Crore</p> <button class="view-details">View Details</button>
+      </div>
+
+      <!-- (all other property cards remain exactly the same)… -->
+
+    </div>
+  </section>
+
+  <!-- FEEDBACK -->
+  <section id="contact" class="feedback">
+    <h2>Get in Touch</h2>
+
+    <form id="feedbackForm" class="feedback-form">
+      <input id="fbName" type="text" placeholder="Your Name" required>
+
+      <input id="fbEmail" type="email" placeholder="Your Email" required>
+      <!-- <input id="fbPhone" type="text" placeholder="Phone Number" required> -->
+
+      <textarea id="fbMessage" rows="4" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn-primary">Submit</button>
+      
+
+    </form>
+  </section>
+
+  <footer class="footer">© 2025 UrbanNest Properties</footer>
+
+  <div id="detailsModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalDesc"></p>
+      <p id="modalArea"></p>
+      <p id="modalBhk"></p>
+      <p id="modalType"></p>
+      <p id="modalPrice"></p>
+      <p id="modalAddress"></p>
+      <p id="modalOwner"></p>
+      <p id="modalPhone"></p>
+    </div>
+  </div>
+  <div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span id="closeCart" class="close-btn">&times;</span>
+
+    <h2>Your Cart</h2>
+
+    <ul id="cartList"></ul>
+
+    <p id="emptyMsg">Your cart is empty.</p>
+  </div>
+</div>
+
+
+  <script src="script.js"></script>
+  
+</body>
+
+</html>

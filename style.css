@@ -218,3 +218,16 @@ body {
   display: none;
 }
 
+.remove-btn {
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+.remove-btn:hover {
+  background: #c62828;
+}
